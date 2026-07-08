@@ -1,0 +1,72 @@
+[
+  {
+    "id": "1",
+    "name": "Marko Novak",
+    "email": "marko.novak@gmail.com",
+    "phone": "+421901234567",
+    "max_books_allowed": 3
+  },
+  {
+    "id": "2",
+    "name": "Alice Johnson",
+    "email": "alice.johnson@gmail.com",
+    "phone": "+447700900123",
+    "max_books_allowed": 3
+  },
+  {
+    "id": "3",
+    "name": "John Smith",
+    "email": "john.smith@gmail.com",
+    "phone": "+12025550101",
+    "max_books_allowed": 3
+  },
+  {
+    "id": "4",
+    "name": "Emma Wilson",
+    "email": "emma.wilson@gmail.com",
+    "phone": "+61412345678",
+    "max_books_allowed": 3
+  },
+  {
+    "id": "5",
+    "name": "David Brown",
+    "email": "david.brown@gmail.com",
+    "phone": "+491701234567",
+    "max_books_allowed": 3
+  },
+  {
+    "id": "6",
+    "name": "Sophia Garcia",
+    "email": "sophia.garcia@gmail.com",
+    "phone": "+34600111222",
+    "max_books_allowed": 3
+  },
+  {
+    "id": "7",
+    "name": "Michael Lee",
+    "email": "michael.lee@gmail.com",
+    "phone": "+6581234567",
+    "max_books_allowed": 3
+  },
+  {
+    "id": "8",
+    "name": "Olivia Martinez",
+    "email": "olivia.martinez@gmail.com",
+    "phone": "+525512345678",
+    "max_books_allowed": 3
+  },
+  {
+    "id": "9",
+    "name": "Liam Anderson",
+    "email": "liam.anderson@gmail.com",
+    "phone": "+64211234567",
+    "max_books_allowed": 3
+  },
+  {
+    "id": "10",
+    "name": "Noah Thompson",
+    "email": "noah.thompson@gmail.com",
+    "phone": "+61298765432",
+    "max_books_allowed": 3
+  }
+]
