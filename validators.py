@@ -1,3 +1,3 @@
-range = range(1, 10)
-for run in range:
-    print(run)
+list = ["ehyu", "hey"]
+for run, li in enumerate(list, 1):
+    print(run, li)

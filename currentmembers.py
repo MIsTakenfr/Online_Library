@@ -4,7 +4,6 @@
 import os
 import uuid
 import json
-range = range(1, 1000000)
 #2 setup
 #___________________________________________________________________________________
 
@@ -67,19 +66,8 @@ def signup():
 
 def view_all_members():
     print("\n")
-    
-    for member, number in enumerate(members_list, range):
-        print(member, number)
-    #for number, member in enumerate(members_list, range) in members_list:
-        
-        
-    
-    
-    
-    # file = open(file_path, "a")
-    # content = file.read()
-    # print(content)
-    # file.close()
+    for number, member in enumerate(members_list, 1):
+        print(f"\n{number}.\t\tName: {member["name"]}\n\t\tID: {member["id"]}\n\t\tEmail: {member["email"]}\n\t\tPhone number: {member["phone"]}\n\t\tNumber of books that they can borrow at this time: {member["max_books_allowed"]}")
 
 def search_for_member():
     while True:
