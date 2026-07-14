@@ -1,25 +1,16 @@
-#imports
-#__________________________________________________________________________________________________________________
-
-
+#_________________________________________________________________________________________________________________
 import os
-from members import login_1, login_2, member_usernames, view_all_members #can_we_move_on, lets_move_on
-#further setup
+from currentmembers import view_all_members, login_or_signup, signup, search_for_member
+import json
 #___________________________________________________________________________________________________________________
-
-
 script_dir = os.path.dirname(os.path.abspath(__file__))
 file_path = os.path.join(script_dir, "members.txt")
-
-
-#start of code
 #_________________________________________________________________________________________________________________
 print("Welcome to the online library!")
-#while True:
-login_1()
-login_2()
-#if can_we_move_on == 1:
-#        break
+
+login_or_signup()
+signup()
+
 
 while True:
     user_menu_choice = input("What would you like to do? \nPress 1 to add a new book. \nPress 2 to view all books. \nPress 3 to search for a book. \nPress 4 to remove a book. \nPress 5 to view all members. \nPress 6 to search for a member. \nPress 7 to borrow a book. \nPress 8 to remove a book. \nPress 9 to display all borrowed books")
@@ -33,6 +24,8 @@ while True:
         pass
     elif user_menu_choice == "5":
         view_all_members()
+        
         break
     elif user_menu_choice == "6":
-        pass
+        search_for_member()
+    
