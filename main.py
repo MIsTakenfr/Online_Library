@@ -1,15 +1,38 @@
 #_________________________________________________________________________________________________________________
 import os
-from currentmembers import view_all_members, login_or_signup, signup, search_for_member
-import json
+from currentmembers import view_all_members, login_or_signup, signup, search_for_member,login
+import json 
+leave = False
+goto_signup = False
 #___________________________________________________________________________________________________________________
 script_dir = os.path.dirname(os.path.abspath(__file__))
 file_path = os.path.join(script_dir, "members.txt")
 #_________________________________________________________________________________________________________________
 print("Welcome to the online library!")
+print(f"{"_"*100}")
+print('')
 
-login_or_signup()
-signup()
+while True:
+    if leave == True:
+        break
+    los = login_or_signup()
+    if los == "yes" and goto_signup != True:
+        while True:
+            login_answer = login()
+            if login_answer == "done":
+                leave = True
+                break
+            elif login_answer == "restart":
+                goto_signup = True
+                break
+            elif login_answer == "retry":
+                break
+            else:
+                print("how the hell did this happen")
+    else:
+        signup()
+        break
+
 
 
 while True:
