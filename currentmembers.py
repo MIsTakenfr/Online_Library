@@ -31,6 +31,8 @@ def login_or_signup():
 def login():
     while True:    
         email_or_phone = input("You can log in in using your phone number & username or your email & username. \nPress 1 for email and 2 for phone. ")
+        
+        
         if email_or_phone.strip() == "1":
             past_username = input("Enter your name here: ")
             past_email = input("Enter your email here: ")
@@ -38,7 +40,7 @@ def login():
                 while True:
                     if mail["email"] == past_email and mail["name"] == past_username:
                         print(f"Welcome back, {past_username}!")
-                        login_done = "done"
+                        login_done = True
                         return login_done
                     else:
                         while True:
@@ -59,7 +61,7 @@ def login():
                 while True:
                     if number["phone"] == past_phone and number["name"] == past_username:
                         print(f"Welcome back, {past_username}!")
-                        login_done = "done"
+                        login_done = True
                         return login_done
                     else:
                         while True:
