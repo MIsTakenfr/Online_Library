@@ -138,5 +138,12 @@
         "author": "Toni Morrison",
         "ISBN": "978-488-44-93886-8",
         "number of copies": 4
+    },
+    {
+        "id": "dc65509b-6031-4e08-a18e-389a134de35a",
+        "title": "the life of marko as told by the foresaid",
+        "author": "marko",
+        "ISBN": "1234",
+        "number of copies": 2
     }
 ]

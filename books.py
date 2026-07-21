@@ -13,7 +13,7 @@ def add_book():
     new_author = input("Who is the author? ")
     new_copies = int(input("How many copies of it are you donating? "))
     new_id = str(uuid.uuid4())
-    book = {"id": new_id, "title": new_book, "author": new_author, "isbn": new_isbn, "copies": new_copies}
+    book = {"id": new_id, "title": new_book, "author": new_author, "ISBN": new_isbn, "number of copies": new_copies}
     books_list.append(book)
     with open("books.json", "w") as file:
         json.dump(books_list, file, indent=4)
@@ -37,22 +37,23 @@ def view_books():
 
 def search_for_book():
     while True:
-        search_choice = input("Press 1 to use their ID \nPress 2 to use their ISBN")
+        search_choice = input("Press 1 to use their ID \nPress 2 to use their ISBN\n")
         if search_choice.strip() == "1":
             search_id = input("enter it's id: ")
             for id in books_list:
                 if id["id"] == search_id:
                     print(f"\nName: {id["title"]}\nID: {id["id"]}\nISBN: {id["ISBN"]}\nAuthor: {id["author"]}\nNumber of books that are in stock: {id["number of copies"]}\n")
-                    break
-                else:
-                    print("That book is a figment of your imagination, try again")
+                    return
+                print("That book is a figment of your imagination, try again")
+                break
         elif search_choice.strip() == "2":
             search_name = input("enter the ISBN of the book that you want to find. ")
             for name in books_list:
                 if name["ISBN"] == search_name:
                     print(f"Name: {name["title"]}\nID: {name["id"]}\nEmail: {name["ISBN"]}\nAuthor: {name["author"]}\nNumber of books that are in stock: {name["number of copies"]}")
-                    #^
-                    break
+                    return
+                print("that book doesn't exist")
+                break
                 
         else:
             print("What you entered was not an option, enter either 1 or 2")

@@ -1,6 +1,6 @@
 #_________________________________________________________________________________________________________________
 import os
-from currentmembers import view_all_members,search_for_member,main_menu,members_menu
+from currentmembers import view_all_members,search_for_member,main_menu,members_menu,delete_member
 from books import books_menu, add_book, view_books, search_for_book, delete_book
 leave = False
 goto_signup = True
@@ -30,18 +30,21 @@ while True:
     elif main_menu_choice == "2":
         members_menu_choice = members_menu()
         if members_menu_choice == "1":
-            pass
+            pass#do later; add member
         elif members_menu_choice == "2":
             view_all_members()
         elif members_menu_choice == "3":
             search_for_member()
         elif members_menu_choice == "4":
-            pass
+            delete_member()
         else:
             print("\nInvalid members menu choice")
+    
+    elif main_menu_choice == "3":
+        print("Exiting, have a nice day.")
 
-else:
-    print("Invalid main menu choice".center(30, "*"))
+    else:
+        print("Invalid main menu choice".center(30, "*"))
 
 
 # if __name__ == "__main__":

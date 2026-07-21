@@ -58,15 +58,29 @@ def main_menu():
     print(" Main Menu ".center(30, "="))
     print("\nPress 1. Books Menu")
     print("\nPress 2. Members Menu")
+    print("\nPress 3. Exit")
     return input("\nPlease select main menu choice : ")
 
 def delete_member():
-    method = input("\nPress 1 to use their ID, and press 2 to use their name. ")
-    if method.strip() == "1":
-        id_delete = input("Enter their id: ")
-        for id in members_list:
-            if id["id"] == id_delete:
-                members_list.remove(id)
-                with open("members.json", "w") as file:
-                    json.dump(members_list, file, indent=4)
+    while True:
+        method = input("\nPress 1 to use their ID, and press 2 to use their name. ")
+        if method.strip() == "1":
+            id_delete = input("Enter their id: ")
+            for id in members_list:
+                if id["id"] == id_delete:
+                    members_list.remove(id)
+                    with open("members.json", "w") as file:
+                        json.dump(members_list, file, indent=4)
+                        return
+                print("None of the members have that ID")
+        elif method.strip() == "2":
+            name_delete = input("Enter their name: ")
+            for name in members_list:
+                if name["name"] == name_delete:
+                    members_list.remove(name)
+                    with open("members.json", "w") as file:
+                        json.dump(members_list, file, indent=4)
+                        return
+                print("None of the members have that name")
+
                 
