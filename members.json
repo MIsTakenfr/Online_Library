@@ -75,19 +75,5 @@
         "email": "markoasher11@gmail.com",
         "phone": "6313539319",
         "max_books_allowed": 100000
-    },
-    {
-        "id": "66c1c369-8352-4358-8fd2-728b80f3c737",
-        "name": "",
-        "email": "",
-        "phone": "",
-        "max_books_allowed": 3
-    },
-    {
-        "id": "2126dff3-bf99-4f96-878e-69ab5c1cba4f",
-        "name": "huh",
-        "email": "no",
-        "phone": "what",
-        "max_books_allowed": 3
     }
 ]

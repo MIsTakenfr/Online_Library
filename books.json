@@ -1,0 +1,142 @@
+[
+    {
+        "id": 1,
+        "title": "The Echo of Silence",
+        "author": "J.R. Reynolds",
+        "ISBN": "978-754-24-13278-4",
+        "number of copies": 4
+    },
+    {
+        "id": 2,
+        "title": "Whispers in the Wind",
+        "author": "Sarah Jenkins",
+        "ISBN": "978-328-27-23434-8",
+        "number of copies": 2
+    },
+    {
+        "id": 2,
+        "title": "Shadows of tomorrow",
+        "author": "Michael Chang",
+        "ISBN": "978-704-64-14165-0",
+        "number of copies": 2
+    },
+    {
+        "id": 3,
+        "title": "The Golden Horizon",
+        "author": "Elena Rostova",
+        "ISBN": "978-323-39-76237-9",
+        "number of copies": 1
+    },
+    {
+        "id": 4,
+        "title": "Beneath the Sapphire Sky",
+        "author": "David Vance",
+        "ISBN": "978-674-35-95181-8",
+        "number of copies": 7
+    },
+    {
+        "id": 5,
+        "title": "Chronicles of the Lost",
+        "author": "Amina Yusuf",
+        "ISBN": "978-325-67-87236-4",
+        "number of copies": 13
+    },
+    {
+        "id": 6,
+        "title": "The Midnight Oracle",
+        "author": "Liam OConnor",
+        "ISBN": "978-990-10-30926-6",
+        "number of copies": 6
+    },
+    {
+        "id": 7,
+        "title": "Forgotten Realms",
+        "author": "Chloe Mercer",
+        "ISBN": "978-384-29-38221-5",
+        "number of copies": 2
+    },
+    {
+        "id": 8,
+        "title": "Secrets of the Ancient Oak",
+        "author": "Arthur Pendelton",
+        "ISBN": "978-194-58-22676-5",
+        "number of copies": 14
+    },
+    {
+        "id": 9,
+        "title": "The Alchemists Daughter",
+        "author": "Sophia Lin",
+        "ISBN": "978-452-87-44671-0",
+        "number of copies": 12
+    },
+    {
+        "id": 10,
+        "title": "Rivers of Destiny",
+        "author": "Marcus Aurel",
+        "ISBN": "978-570-78-26361-6",
+        "number of copies": 2
+    },
+    {
+        "id": 11,
+        "title": "Starlight Melodies",
+        "author": "Emily Dickinson",
+        "ISBN": "978-665-47-92397-9",
+        "number of copies": 15
+    },
+    {
+        "id": 12,
+        "title": "The Iron Citadel",
+        "author": "Gabriel Garcia",
+        "ISBN": "978-982-56-85674-3",
+        "number of copies": 12
+    },
+    {
+        "id": 13,
+        "title": "Echoes from the Past",
+        "author": "Harper Lee",
+        "ISBN": "978-171-15-96673-3",
+        "number of copies": 13
+    },
+    {
+        "id": 14,
+        "title": "Beyond the Horizon",
+        "author": "George Orwell",
+        "ISBN": "978-396-20-40512-1",
+        "number of copies": 7
+    },
+    {
+        "id": 15,
+        "title": "The Silent Guardian",
+        "author": "Virginia Woolf",
+        "ISBN": "978-384-68-93320-5",
+        "number of copies": 3
+    },
+    {
+        "id": 16,
+        "title": "Tides of Fortune",
+        "author": "Leo Tolstoy",
+        "ISBN": "978-479-55-37460-4",
+        "number of copies": 12
+    },
+    {
+        "id": 17,
+        "title": "The Last Ember",
+        "author": "Jane Austen",
+        "ISBN": "978-799-92-19358-9",
+        "number of copies": 11
+    },
+    {
+        "id": 18,
+        "title": "Labyrinths of Mind",
+        "author": "John Steinbeck",
+        "ISBN": "978-275-78-42087-2",
+        "number of copies": 8
+    },
+    {
+        "id": 19,
+        "title": "The Weavers Loom",
+        "author": "Toni Morrison",
+        "ISBN": "978-488-44-93886-8",
+        "number of copies": 4
+    }
+]
