@@ -1,6 +1,6 @@
 import json
 import uuid
-
+from validators import new_copy_error
 
 with open("books.json", "r") as file:
     books_list = json.load(file)
@@ -11,7 +11,7 @@ def add_book():
     new_isbn = input("what is the ISBN of the book? ")
     new_book = input("what's the name of the book? ")
     new_author = input("Who is the author? ")
-    new_copies = int(input("How many copies of it are you donating? "))
+    new_copies = new_copy_error()#this is the best piece of work ive ever done (:
     new_id = str(uuid.uuid4())
     book = {"id": new_id, "title": new_book, "author": new_author, "ISBN": new_isbn, "number of copies": new_copies}
     books_list.append(book)
@@ -65,6 +65,9 @@ def delete_book():
     for book in books_list:
         if book["ISBN"] == book_isbn:
             books_list.remove(book)
+            with open("books.json", "w") as file:
+                        json.dump(books_list, file, indent=4)
+            
             print("\nBook has been deleted succesfully".upper())
             return
     

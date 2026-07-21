@@ -82,5 +82,3 @@ def delete_member():
                         json.dump(members_list, file, indent=4)
                         return
                 print("None of the members have that name")
-
-                
