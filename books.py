@@ -27,10 +27,13 @@ def books_menu():
     return input("\nPlease select books menu choice : ")
 
 def view_books():
-    with open ("books.json", "r") as file:
-        for number, thing in enumerate(books_list, 1):
-            print(f"{number}. \t\tID:\t{thing["id"]}\n\t\tName:\t{thing["title"]}\n\t\tAuthor:\t{thing["author"]}\n\t\tISBN:\t{thing["ISBN"]}\n\t\tNumber of copies:\t{thing["number of copies"]}\n")
-
+    for number, thing in enumerate(books_list, 1):
+        print(f"{number}.")
+        print(f"\t\tID:\t{thing['id']}")
+        print(f"\t\tName:\t{thing['title']}")
+        print(f"\t\tAuthor:\t{thing['author']}")
+        print(f"\t\tISBN:\t{thing['ISBN']}")
+        print(f"\t\tNumber of copies:\t{thing['number of copies']}\n")
 
 def search_for_book():
     while True:
@@ -50,11 +53,20 @@ def search_for_book():
                     print(f"Name: {name["title"]}\nID: {name["id"]}\nEmail: {name["ISBN"]}\nAuthor: {name["author"]}\nNumber of books that are in stock: {name["number of copies"]}")
                     #^
                     break
-                else:
-                    print("That ISBN dosen't exist and it never will, try again")
+                
         else:
             print("What you entered was not an option, enter either 1 or 2")
 
-
-
-search_for_book()
+def delete_book():
+    print(" Delete Book Record ".center(40, "="))
+    book_isbn = input("\nEnter the book's ISBN : ")
+    
+    for book in books_list:
+        if book["ISBN"] == book_isbn:
+            books_list.remove(book)
+            print("\nBook has been deleted succesfully".upper())
+            return
+    
+    print("\nThere's no such book exists")
+    
+    
