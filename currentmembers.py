@@ -21,27 +21,13 @@ def view_all_members():
 
 def search_for_member():
     while True:
-        search_choice = input("Press 1 to use their ID \nPress 2 to use their username")
-        if search_choice.strip() == "1":
-            search_id = input("enter their id: ")
-            for id in members_list:
-                if id["id"] == search_id:
-                    print(f"\nName: {id["name"]}\nID: {id["id"]}\nEmail: {id["email"]}\nPhone number: {id["phone"]}\nNumber of books that they can borrow at this time: {id["max_books_allowed"]}\n")
-                    #enter how many books they have borrowed rn
-                    break
-                else:
-                    print("No one in the library has that id, try again")
-        elif search_choice.strip() == "2":
-            search_name = input("enter the username of the person that you want to find.")
-            for name in members_list:
-                if name["name"] == search_name:
-                    print(f"Name: {name["name"]}\nID: {name["id"]}\nEmail: {name["email"]}\n Phone number: {name["phone"]}\n Number of books that they can borrow at this time: {name["max_books_allowed"]}")
-                    #^
-                    break
-                else:
-                    print("No one in the library has that name, try again")
-        else:
-            print("What you entered was not an option, enter either 1 or 2")
+        search_id = input("Enter their email: ")
+        for member in members_list:
+            if member["email"] == search_id:
+                print(f"\nName: {member["name"]}\nID: {member["id"]}\nEmail: {member["email"]}\nPhone number: {member["phone"]}\nNumber of books that they can borrow at this time: {member["max_books_allowed"]}\n")
+                #enter how many books they have borrowed rn
+                break
+        print("No one in the library has that email, try again")
 
 
 def members_menu():
@@ -82,3 +68,6 @@ def delete_member():
                         json.dump(members_list, file, indent=4)
                         return
                 print("None of the members have that name")
+
+def check_book_limit(member):
+    pass

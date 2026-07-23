@@ -37,25 +37,12 @@ def view_books():
 
 def search_for_book():
     while True:
-        search_choice = input("Press 1 to use their ID \nPress 2 to use their ISBN\n")
-        if search_choice.strip() == "1":
-            search_id = input("enter it's id: ")
-            for id in books_list:
-                if id["id"] == search_id:
-                    print(f"\nName: {id["title"]}\nID: {id["id"]}\nISBN: {id["ISBN"]}\nAuthor: {id["author"]}\nNumber of books that are in stock: {id["number of copies"]}\n")
-                    return
-                print("That book is a figment of your imagination, try again")
-                break
-        elif search_choice.strip() == "2":
-            search_name = input("enter the ISBN of the book that you want to find. ")
-            for name in books_list:
-                if name["ISBN"] == search_name:
-                    print(f"Name: {name["title"]}\nID: {name["id"]}\nEmail: {name["ISBN"]}\nAuthor: {name["author"]}\nNumber of books that are in stock: {name["number of copies"]}")
-                    return
-                print("that book doesn't exist")
-                break
-        else:
-            print("What you entered was not an option, enter either 1 or 2")
+        search_name = input("enter the ISBN of the book that you want to find. ")
+        for book in books_list:
+            if book["ISBN"] == search_name:
+                print(f"Name: {book["title"]}\nID: {book["id"]}\nEmail: {book["ISBN"]}\nAuthor: {book["author"]}\nNumber of books that are in stock: {book["number of copies"]}")
+                return
+        print("that book doesn't exist")
 
 def delete_book():
     print(" Delete Book Record ".center(40, "="))
@@ -73,3 +60,6 @@ def delete_book():
     print("\nThere's no such book")
     
     
+
+def check_if_books_more_than_1(copies):
+    return copies > 0
