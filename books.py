@@ -54,7 +54,6 @@ def search_for_book():
                     return
                 print("that book doesn't exist")
                 break
-                
         else:
             print("What you entered was not an option, enter either 1 or 2")
 
@@ -71,6 +70,6 @@ def delete_book():
             print("\nBook has been deleted succesfully".upper())
             return
     
-    print("\nThere's no such book exists")
+    print("\nThere's no such book")
     
     
