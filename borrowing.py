@@ -1,7 +1,7 @@
 #imports
 #___________________________________________________________________________________________________
 import os
-from books import books_data,search_for_book,check_if_books_more_than_1
+from books import books_list,search_for_book,check_if_books_more_than_1
 from currentmembers import search_for_member
 
 
@@ -13,23 +13,17 @@ file_path = os.path.join(script_dir, "members.txt")
 #defs
 #___________________________________________________________________________________________________
 def borrow_a_book():
-    while True:
-        while True:
-            identity = input("How would you like to identify the book you want to borrow? Press 1 to use the ISBN.")
-            if identity == "1":
-                isbn_from_user = input("enter the name ISBN number here: ")
-                for book in books_data:
-                    if book["isbn"] == isbn_from_user:
-                        copies = book["copies"]
-                        member_check = search_for_member()
-                        if member_check == False:
-                            print("You don't exist")
-                            break
-                        book_check = search_for_book()
-                        if book_check == False:
-                            print("that book doesn't exist")
-                            break
-                        
+    isbn_from_user = input("enter the name ISBN number here: ")
+    for book in books_list:
+        if book["ISBN"] == isbn_from_user:
+            copies = book["copies"]
+            member_check = search_for_member()
+            if not member_check:
+                print("You don't exist")
+            book_check = search_for_book()
+            if not book_check:
+                print("that book doesn't exist")
+            
 
 
 
