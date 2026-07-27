@@ -41,8 +41,9 @@ def search_for_book():
         for book in books_list:
             if book["ISBN"] == search_name:
                 print(f"Name: {book["title"]}\nID: {book["id"]}\nEmail: {book["ISBN"]}\nAuthor: {book["author"]}\nNumber of books that are in stock: {book["number of copies"]}")
-                return
+                return True
         print("that book doesn't exist")
+        return False
 
 def delete_book():
     print(" Delete Book Record ".center(40, "="))

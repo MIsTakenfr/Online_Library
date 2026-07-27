@@ -13,13 +13,28 @@ file_path = os.path.join(script_dir, "members.txt")
 #defs
 #___________________________________________________________________________________________________
 def borrow_a_book():
-    identity = input("How would you like to identify the book you want to borrow? \npress 1 to use the ISBN, or, \npress 2 to use the name.")
-    if identity == "1":
-        isbn_from_user = input("enter the name ISBN number here: ")
-        for book in books_data:
-            if book["isbn"] == isbn_from_user:
-                print(f"{book["id"]} andddddd {book["copies"]}")
-                copies = book["copies"]
+    while True:
+        while True:
+            identity = input("How would you like to identify the book you want to borrow? Press 1 to use the ISBN.")
+            if identity == "1":
+                isbn_from_user = input("enter the name ISBN number here: ")
+                for book in books_data:
+                    if book["isbn"] == isbn_from_user:
+                        copies = book["copies"]
+                        member_check = search_for_member()
+                        if member_check == False:
+                            print("You don't exist")
+                            break
+                        book_check = search_for_book()
+                        if book_check == False:
+                            print("that book doesn't exist")
+                            break
+                        
+
+
+
+
+
                 check_if_books_more_than_1(copies)
 
 

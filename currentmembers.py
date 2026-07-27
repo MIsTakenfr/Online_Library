@@ -26,8 +26,9 @@ def search_for_member():
             if member["email"] == search_id:
                 print(f"\nName: {member["name"]}\nID: {member["id"]}\nEmail: {member["email"]}\nPhone number: {member["phone"]}\nNumber of books that they can borrow at this time: {member["max_books_allowed"]}\n")
                 #enter how many books they have borrowed rn
-                break
+                return True
         print("No one in the library has that email, try again")
+        return False
 
 
 def members_menu():
@@ -37,7 +38,6 @@ def members_menu():
     print("\nPress 3. Search member")
     print("\nPress 4. Delete member")
     return input("\nPlease select members menu choice : ")
-    
 
 
 def main_menu():
