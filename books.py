@@ -8,12 +8,12 @@ with open("books.json", "r") as file:
 ######################################################################################################
 
 def add_book():
-    new_isbn = input("what is the ISBN of the book? ")
+    new_isbn = input("what is the isbn of the book? ")
     new_book = input("what's the name of the book? ")
     new_author = input("Who is the author? ")
     new_copies = new_copy_error()#this is the best piece of work ive ever done (:
     new_id = str(uuid.uuid4())
-    book = {"id": new_id, "title": new_book, "author": new_author, "ISBN": new_isbn, "number of copies": new_copies}
+    book = {"id": new_id, "title": new_book, "author": new_author, "isbn": new_isbn, "copies": new_copies}
     books_list.append(book)
     with open("books.json", "w") as file:
         json.dump(books_list, file, indent=4)
@@ -32,25 +32,25 @@ def view_books():
         print(f"\t\tID:\t{thing['id']}")
         print(f"\t\tName:\t{thing['title']}")
         print(f"\t\tAuthor:\t{thing['author']}")
-        print(f"\t\tISBN:\t{thing['ISBN']}")
-        print(f"\t\tNumber of copies:\t{thing['number of copies']}\n")
+        print(f"\t\tisbn:\t{thing['isbn']}")
+        print(f"\t\tNumber of copies:\t{thing['copies']}\n")
 
 def search_for_book():
     while True:
-        search_name = input("enter the ISBN of the book that you want to find. ")
+        search_name = input("enter the isbn of the book. \n")
         for book in books_list:
-            if book["ISBN"] == search_name:
-                print(f"Name: {book["title"]}\nID: {book["id"]}\nEmail: {book["ISBN"]}\nAuthor: {book["author"]}\nNumber of books that are in stock: {book["number of copies"]}")
-                return True
+            if book["isbn"] == search_name:
+                print(f"Name: {book["title"]}\nID: {book["id"]}\nEmail: {book["isbn"]}\nAuthor: {book["author"]}\nNumber of books that are in stock: {book["copies"]}")
+                return book["copies"]
         print("that book doesn't exist")
         return False
 
 def delete_book():
     print(" Delete Book Record ".center(40, "="))
-    book_isbn = input("\nEnter the book's ISBN : ")
+    book_isbn = input("\nEnter the book's isbn : ")
     
     for book in books_list:
-        if book["ISBN"] == book_isbn:
+        if book["isbn"] == book_isbn:
             books_list.remove(book)
             with open("books.json", "w") as file:
                         json.dump(books_list, file, indent=4)
@@ -63,4 +63,7 @@ def delete_book():
     
 
 def check_if_books_more_than_1(copies):
-    return copies > 0
+    if 0 > copies:
+        return False
+    else:
+        print("dear god")

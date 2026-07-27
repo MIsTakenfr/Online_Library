@@ -2,7 +2,7 @@
 #___________________________________________________________________________________________________
 import os
 from books import books_list,search_for_book,check_if_books_more_than_1
-from currentmembers import search_for_member
+from currentmembers import search_for_member,check_book_limit
 
 
 #setup
@@ -13,23 +13,30 @@ file_path = os.path.join(script_dir, "members.txt")
 #defs
 #___________________________________________________________________________________________________
 def borrow_a_book():
-    isbn_from_user = input("enter the name ISBN number here: ")
+
     for book in books_list:
-        if book["ISBN"] == isbn_from_user:
-            copies = book["copies"]
-            member_check = search_for_member()
-            if not member_check:
-                print("You don't exist")
-            book_check = search_for_book()
-            if not book_check:
-                print("that book doesn't exist")
-            
+
+        print("To start, confirm who you are\n")
+        member_check = search_for_member()
+        if not member_check:
+            print("You don't exist")
+
+        print("\nNow, what book do you want to borrow?\n\n")
+        book_check = search_for_book()
+        if not book_check:
+            print("that book doesn't exist")
+
+        number_check = check_if_books_more_than_1(book_check)
+        if not number_check:
+            print("\nthere are none of those left\n")
+        else:
+            print("hi")
+        # book_limit = check_book_limit(member_check)
+        # if not book_limit:
+        #     print("\nyou can't borrow any more books, return one and than you can.")
 
 
 
-
-
-                check_if_books_more_than_1(copies)
 
 
 #Check to see if they exist. if the book they want to borrow is in the library. check if ther are more than 1 copies available. check if they have reached their borrowing limit.

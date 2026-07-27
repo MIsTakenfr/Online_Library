@@ -17,11 +17,7 @@ print("Welcome to the online library!")
 print(f"{"_"*100}")
 print('')
 
-for book in books_list:
-    book["id"] = str(uuid.uuid4())
-with open("books.json", "w") as file:
-    json.dump(books_list, file, indent=4)
-print(books_list)
+
 
 
 

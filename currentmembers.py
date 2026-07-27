@@ -21,12 +21,12 @@ def view_all_members():
 
 def search_for_member():
     while True:
-        search_id = input("Enter their email: ")
+        search_id = input("Enter email: ")
         for member in members_list:
             if member["email"] == search_id:
                 print(f"\nName: {member["name"]}\nID: {member["id"]}\nEmail: {member["email"]}\nPhone number: {member["phone"]}\nNumber of books that they can borrow at this time: {member["max_books_allowed"]}\n")
                 #enter how many books they have borrowed rn
-                return True
+                return member["max_books_allowed"]
         print("No one in the library has that email, try again")
         return False
 
@@ -69,5 +69,6 @@ def delete_member():
                         return
                 print("None of the members have that name")
 
-def check_book_limit(member):
-    pass
+def check_book_limit(max_books):
+    if max_books <= 0:
+        return False
