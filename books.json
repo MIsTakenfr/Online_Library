@@ -1,0 +1,142 @@
+[
+    {
+        "id": "91341a8f-d05f-4f7a-a98e-7bfdedb32792",
+        "title": "The Echo of Silence",
+        "author": "J.R. Reynolds",
+        "copies": 4,
+        "isbn": "978-754-24-13278-4"
+    },
+    {
+        "id": "9411c17a-ad1d-4de1-b21a-aa7a10d64504",
+        "title": "Whispers in the Wind",
+        "author": "Sarah Jenkins",
+        "copies": 2,
+        "isbn": "978-328-27-23434-8"
+    },
+    {
+        "id": "0bb80da4-6514-4338-9637-b459d8d9e1b4",
+        "title": "Shadows of tomorrow",
+        "author": "Michael Chang",
+        "copies": 2,
+        "isbn": "978-704-64-14165-0"
+    },
+    {
+        "id": "42c8da62-d09c-40cb-ac33-cc3ed6cdb8de",
+        "title": "The Golden Horizon",
+        "author": "Elena Rostova",
+        "copies": 1,
+        "isbn": "978-323-39-76237-9"
+    },
+    {
+        "id": "0e8dbb0d-cf2b-4b10-9a9b-73d234f4cc21",
+        "title": "Beneath the Sapphire Sky",
+        "author": "David Vance",
+        "copies": 7,
+        "isbn": "978-674-35-95181-8"
+    },
+    {
+        "id": "07872d7e-93d9-4ad3-b96b-f0fa7b9f5755",
+        "title": "Chronicles of the Lost",
+        "author": "Amina Yusuf",
+        "copies": 13,
+        "isbn": "978-325-67-87236-4"
+    },
+    {
+        "id": "bb09075d-f44b-4e3c-b6dd-36c5769b7e3d",
+        "title": "The Midnight Oracle",
+        "author": "Liam O'Connor",
+        "copies": 6,
+        "isbn": "978-990-10-30926-6"
+    },
+    {
+        "id": "fd7b6e2c-68a1-4158-9f79-74f83c5b216a",
+        "title": "Forgotten Realms",
+        "author": "Chloe Mercer",
+        "copies": 2,
+        "isbn": "978-384-29-38221-5"
+    },
+    {
+        "id": "15a7ae67-1d0d-4ada-949b-6b605adf0511",
+        "title": "Secrets of the Ancient Oak",
+        "author": "Arthur Pendelton",
+        "copies": 14,
+        "isbn": "978-194-58-22676-5"
+    },
+    {
+        "id": "44bf4ee7-fd21-4153-86ac-76b538a92295",
+        "title": "The Alchemist's Daughter",
+        "author": "Sophia Lin",
+        "copies": 12,
+        "isbn": "978-452-87-44671-0"
+    },
+    {
+        "id": "c1f0ddd7-c92f-4308-9684-a8a74771b65f",
+        "title": "Rivers of Destiny",
+        "author": "Marcus Aurel",
+        "copies": 2,
+        "isbn": "978-570-78-26361-6"
+    },
+    {
+        "id": "6da26487-e92a-4200-a5c4-905f35ca04dd",
+        "title": "Starlight Melodies",
+        "author": "Emily Dickinson",
+        "copies": 15,
+        "isbn": "978-665-47-92397-9"
+    },
+    {
+        "id": "45a0c541-d7c7-4fdb-8622-03a1643faa57",
+        "title": "The Iron Citadel",
+        "author": "Gabriel Garcia",
+        "copies": 12,
+        "isbn": "978-982-56-85674-3"
+    },
+    {
+        "id": "9e33ef1b-8c4f-41b1-8061-cac8a719ce46",
+        "title": "Echoes from the Past",
+        "author": "Harper Lee",
+        "copies": 13,
+        "isbn": "978-171-15-96673-3"
+    },
+    {
+        "id": "506b7037-39b6-4616-8a12-a68afbc76008",
+        "title": "Beyond the Horizon",
+        "author": "George Orwell",
+        "copies": 7,
+        "isbn": "978-396-20-40512-1"
+    },
+    {
+        "id": "921631d7-f30d-4b1d-b135-0e543706b65e",
+        "title": "The Silent Guardian",
+        "author": "Virginia Woolf",
+        "copies": 3,
+        "isbn": "978-384-68-93320-5"
+    },
+    {
+        "id": "21a327a3-eb1a-4ac7-91aa-75127776b213",
+        "title": "Tides of Fortune",
+        "author": "Leo Tolstoy",
+        "copies": 12,
+        "isbn": "978-479-55-37460-4"
+    },
+    {
+        "id": "644db588-1772-4b75-9a08-620f60d92fc3",
+        "title": "The Last Ember",
+        "author": "Jane Austen",
+        "copies": 11,
+        "isbn": "978-799-92-19358-9"
+    },
+    {
+        "id": "7a274ed8-beec-4393-8259-8b97e8daad6a",
+        "title": "Labyrinths of Mind",
+        "author": "John Steinbeck",
+        "copies": 8,
+        "isbn": "978-275-78-42087-2"
+    },
+    {
+        "id": "6d8181f8-82e3-4578-99e0-0b007615902a",
+        "title": "The Weaver's Loom",
+        "author": "Toni Morrison",
+        "copies": 4,
+        "isbn": "978-488-44-93886-8"
+    }
+]

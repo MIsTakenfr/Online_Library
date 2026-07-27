@@ -6,6 +6,7 @@ import json
 import uuid
 leave = False
 goto_signup = True
+
 with open("books.json", "r") as file:
     books_list = json.load(file)
 #___________________________________________________________________________________________________________________
@@ -17,9 +18,7 @@ print(f"{"_"*100}")
 print('')
 
 for book in books_list:
-    book_isbn = book["ISBN"]
-    book["isbn"] = book_isbn
-    del book["ISBN"]
+    book["id"] = str(uuid.uuid4())
 with open("books.json", "w") as file:
     json.dump(books_list, file, indent=4)
 print(books_list)
