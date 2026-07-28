@@ -63,7 +63,6 @@ def delete_book():
     
 
 def check_if_books_more_than_1(copies):
-    if 0 > copies:
-        return False
-    else:
-        print("dear god")
+    if copies > 0:
+        return True
+    return False
