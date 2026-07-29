@@ -1,15 +1,17 @@
 #imports
 #___________________________________________________________________________________________________
-import os
+from datetime import date
 from books import books_list,search_for_book,check_if_books_more_than_1
 from currentmembers import search_for_member,check_book_limit
 import json
+import uuid
 
 
 #setup
 #___________________________________________________________________________________________________
 with open("members.json", "r") as file:
     members_list = json.load(file) 
+
 
 #defs
 #___________________________________________________________________________________________________
@@ -38,11 +40,25 @@ def borrow_a_book():
             print("\nyou can't borrow any more books, return one and than you can.")
 
         member_check["max_books_allowed"] = member_check["max_books_allowed"] - 1
-        
-        #with open("members.json", "w") as file:
-        #    json.dump(members_list, file, indent=4)
-        print(members_list)
-        
+        for member in members_list:
+            if member["id"] == member_check["id"]:
+                members_index = members_list.index(member)
+                members_list[members_index] = member_check
+
+        with open("members.json", "w") as file:
+            json.dump(members_list, file, indent=4)
+        book_id = book_check["id"]
+        member_id = member_check["id"]
+        todays_date = date.today()
+        record_id = str(uuid.uuid4())
+        new_record = {"id": record_id, "book_id": book_id, "member_id": member_id, "date": todays_date, "returned": False}
+
+
+
+
+
+        #make this a function
+        #take a book out of the stock
 
 
 

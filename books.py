@@ -41,7 +41,7 @@ def search_for_book():
         for book in books_list:
             if book["isbn"] == search_name:
                 print(f"Name: {book["title"]}\nID: {book["id"]}\nEmail: {book["isbn"]}\nAuthor: {book["author"]}\nNumber of books that are in stock: {book["copies"]}")
-                return book["copies"]
+                return book
         print("that book doesn't exist")
         return False
 

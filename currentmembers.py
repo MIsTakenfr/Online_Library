@@ -73,3 +73,12 @@ def check_book_limit(max_books):
     if max_books > 0:
         return True
     return False
+
+
+
+
+
+# for member in members_list:
+#     member["id"] = str(uuid.uuid4())
+# with open("members.json", "w") as file:
+#     json.dump(members_list, file,indent=4)
