@@ -12,6 +12,9 @@ import uuid
 with open("members.json", "r") as file:
     members_list = json.load(file) 
 
+with open("borrowed_records.json", "r") as file:
+    borrowed_list = json.load(file)
+
 
 #defs
 #___________________________________________________________________________________________________
@@ -31,7 +34,7 @@ def borrow_a_book():
         if not book_check:
             print("that book doesn't exist")
 
-        number_check = check_if_books_more_than_1(book_check)
+        number_check = check_if_books_more_than_1(book_check["copies"])
         if not number_check:
             print("\nthere are none of those left\n")
         
@@ -49,9 +52,13 @@ def borrow_a_book():
             json.dump(members_list, file, indent=4)
         book_id = book_check["id"]
         member_id = member_check["id"]
-        todays_date = date.today()
+        #todays_date = date.today()
         record_id = str(uuid.uuid4())
-        new_record = {"id": record_id, "book_id": book_id, "member_id": member_id, "date": todays_date, "returned": False}
+        new_record = {"id": record_id, "book_id": book_id, "member_id": member_id, "returned": False}
+        borrowed_list.append(new_record)
+        with open("borrowed_records.json", "w") as file:
+            json.dump(borrowed_list, file, indent=4)
+
 
 
 
