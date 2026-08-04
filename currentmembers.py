@@ -1,16 +1,11 @@
 #1 imports
 #__________________________________________________________________________________
-
-
-
-import os
+from assist_functions import add_to_json
 import uuid
 import json
 #2 setup
 #___________________________________________________________________________________
 
-script_dir = os.path.dirname(os.path.abspath(__file__))
-file_path = os.path.join(script_dir, "members.txt")
 with open("members.json", "r") as file:
     members_list = json.load(file)
 
@@ -55,24 +50,23 @@ def delete_member():
             for id in members_list:
                 if id["id"] == id_delete:
                     members_list.remove(id)
-                    with open("members.json", "w") as file:
-                        json.dump(members_list, file, indent=4)
-                        return
+                    add_to_json("members.json", members_list)
+                    return
                 print("None of the members have that ID")
         elif method.strip() == "2":
             name_delete = input("Enter their name: ")
             for name in members_list:
                 if name["name"] == name_delete:
                     members_list.remove(name)
-                    with open("members.json", "w") as file:
-                        json.dump(members_list, file, indent=4)
-                        return
+                    add_to_json("members.json", members_list)
+                    return
                 print("None of the members have that name")
 
 def check_book_limit(max_books):
     if max_books > 0:
         return True
     return False
+    
 
 
 

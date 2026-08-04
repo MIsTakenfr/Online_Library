@@ -5,12 +5,14 @@ from books import books_list,search_for_book,check_if_books_more_than_1
 from currentmembers import search_for_member,check_book_limit
 import json
 import uuid
+from assist_functions import add_to_json
 
 
 #setup
 #___________________________________________________________________________________________________
 with open("members.json", "r") as file:
     members_list = json.load(file) 
+print(members_list)
 
 with open("borrowed_records.json", "r") as file:
     borrowed_list = json.load(file)
@@ -48,16 +50,14 @@ def borrow_a_book():
                 members_index = members_list.index(member)
                 members_list[members_index] = member_check
 
-        with open("members.json", "w") as file:
-            json.dump(members_list, file, indent=4)
+        add_to_json("members_json", members_list)
         book_id = book_check["id"]
         member_id = member_check["id"]
         #todays_date = date.today()
         record_id = str(uuid.uuid4())
         new_record = {"id": record_id, "book_id": book_id, "member_id": member_id, "returned": False}
         borrowed_list.append(new_record)
-        with open("borrowed_records.json", "w") as file:
-            json.dump(borrowed_list, file, indent=4)
+        add_to_json("borrowed_records.json", borrowed_list)
 
 
 

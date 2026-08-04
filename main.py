@@ -1,17 +1,8 @@
-#_________________________________________________________________________________________________________________
-import os
-from currentmembers import view_all_members,search_for_member,main_menu,members_menu,delete_member
+from currentmembers import view_all_members,search_for_member,members_menu,delete_member
 from books import books_menu, add_book, view_books, search_for_book, delete_book
-import json
-import uuid
+from assist_functions import main_menu
 leave = False
 goto_signup = True
-
-with open("books.json", "r") as file:
-    books_list = json.load(file)
-#___________________________________________________________________________________________________________________
-script_dir = os.path.dirname(os.path.abspath(__file__))
-file_path = os.path.join(script_dir, "members.txt")
 #_________________________________________________________________________________________________________________
 print("Welcome to the online library!")
 print(f"{"_"*100}")

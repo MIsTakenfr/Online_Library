@@ -1,6 +1,8 @@
 import json
 import uuid
 from validators import new_copy_error
+from assist_functions import add_to_json
+
 
 with open("books.json", "r") as file:
     books_list = json.load(file)
@@ -52,14 +54,15 @@ def delete_book():
     for book in books_list:
         if book["isbn"] == book_isbn:
             books_list.remove(book)
-            with open("books.json", "w") as file:
-                        json.dump(books_list, file, indent=4)
+            add_to_json("books.json", books_list)
             
             print("\nBook has been deleted succesfully".upper())
             return
     
     print("\nThere's no such book")
-    
+
+add_book()
+delete_book()
     
 
 def check_if_books_more_than_1(copies):
